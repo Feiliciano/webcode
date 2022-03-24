@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <dir id="app">
+        <img v-bind:src="url">
+<h1>{{message}}</h1>
+<h3>{{date}}</h3>
+    </dir>
+    <script>
+        const hello = {
+    // 指定数据源，既MVVM中的Model
+    data: function() {
+        return {
+            message: '你好',
+            date:'2022-03-34',
+            url:'https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2868425292.webp'
+        }
+    }
+}
+const app = Vue.createApp(hello)
+app.mount('#app') // 指定当前vue实例要控制页面的哪个区域
+    </script>
+</body>
+</html>
